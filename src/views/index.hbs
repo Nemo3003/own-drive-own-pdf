@@ -3,11 +3,20 @@
   <p class="lead">Aqui encontraras los pdfs, libros y mas que necesitaras durante tu carrera!!</p>
   <hr class="my-4" />
   <div>
-    <p>Eres el admin?</p>
+  {{#if user}}
+    <p>Go ahead and make some changes</p>
     <a
+      class="btn btn-primary btn-lg"
+      href="/pdf/add"
+      role="button"
+      >Make something fun!</a>
+    {{else}}
+      <p>Eres el admin?</p>
+      <a
       class="btn btn-primary btn-lg"
       href="/signin"
       role="button"
-    >Inicia Sesion</a>
+      >Inicia Sesion</a>
+    {{/if}}
   </div>
 </div>

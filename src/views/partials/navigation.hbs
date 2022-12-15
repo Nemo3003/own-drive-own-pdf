@@ -32,16 +32,19 @@
               PDFs
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Todas los</a>
-              <a class="dropdown-item" href="#">Agregar una tarea</a>
+              <a class="dropdown-item" href="/class/all">Todas las clases</a>
+              <a class="dropdown-item" href="/class/add">Agregar una tarea</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/logout">Logout</a>
             </ul>
           </li>
         {{else}}
-          <li class="nav-item">
+          <ul class="nav-item">
+            <a class="nav-link" href="/class/all">Todas las clases</a>
+          </ul>
+          <ul class="nav-item">
             <a class="nav-link" href="/signin">Login</a>
-          </li>
+          </ul>
         {{/if}}
       </ul>
     </div>
