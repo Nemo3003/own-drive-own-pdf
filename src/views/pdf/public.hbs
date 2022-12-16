@@ -1,1 +1,16 @@
-<h1>Here you see stuff</h1>
+<div class="row">
+    {{#each games}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body ">
+                <h4 class="card-title d-flex justify-content-between align-items-center">{{name}}
+                <p>{{first_alt}}</p>
+                <p>{{sec_alt}}</p>
+                <p>{{third_alt}}</p>
+                <p>{{fourth_alt}}</p>
+                <p>{{fift_alt}}</p>
+            </div>
+        </div>
+    </div>
+  {{/each}}
+</div>

@@ -1,11 +1,27 @@
 const mongoose = require('mongoose');
 
 const UploadFile = new mongoose.Schema({
-    classy: {
+    name: {
         type: String,
         required: true
     },
-    archive:{
+    first_alt:{
+        type: String,
+        required: true
+    },
+    second_alt:{
+        type: String,
+        required: true
+    },
+    third_alt:{
+        type: String,
+        required: true
+    },
+    fourth_alt:{
+        type: String,
+        required: true
+    },
+    fifth_alt:{
         type: String,
         required: true
     }
