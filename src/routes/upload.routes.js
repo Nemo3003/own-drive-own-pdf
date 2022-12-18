@@ -1,7 +1,7 @@
 var cors = require('cors')
 const express = require('express');
 const router = express.Router();
-const {createUpload, getUploads} = require('../controllers/upload.controller');
+const {createUpload, getUploads,seeUploads} = require('../controllers/upload.controller');
 
 
 router.get('/add', function(req, res){
@@ -10,9 +10,7 @@ router.get('/add', function(req, res){
 router.get('/all', function(req, res){
     res.render('../views/pdf/public.hbs')
 })
-router.get("/all_add", function(req, res){
-    res.render('../views/pdf/adminAll')
-})
+router.get("/all_add", seeUploads)
 router.post('/pdf/add', createUpload);
 
 // Exports

@@ -29,6 +29,16 @@
     </div>
     <div class="card-body text-right">
       <form action="/class/pdf/add" method="POST">
+      <div class="mb-3">
+          <label for="classy">Class:</label>
+          <input
+            type="text"
+            name="classy"
+            class="form-control"
+            placeholder="Class name"
+            autofocus
+          />
+        </div>
         <div class="mb-3">
           <label for="name">Title:</label>
           <input
@@ -41,17 +51,19 @@
         </div>
         <div class="mb-3">
           <label for="first_alt">First Alternative:</label>
-          <textarea
-            name="first_alt"
-            class="form-control"
-            placeholder="Drive"
-          ></textarea>
-        </div>
-        <div class="mb-3">
-          <label for="sec_alt">Second Alternative:</label>
           <input
             type="text"
-            name="sec_alt"
+            name="first_alt"
+            class="form-control"
+            placeholder="Title"
+            autofocus
+          />
+        </div>
+        <div class="mb-3">
+          <label for="second_alt">Second Alternative:</label>
+          <input
+            type="text"
+            name="second_alt"
             class="form-control"
             placeholder="Drive"
             autofocus
@@ -78,10 +90,10 @@
           />
         </div>
         <div class="mb-3">
-          <label for="fift_alt">Fift Alternative:</label>
+          <label for="fifth_alt">Fifth Alternative:</label>
           <input
             type="text"
-            name="fift_alt"
+            name="fifth_alt"
             class="form-control"
             placeholder="Drive"
             autofocus
