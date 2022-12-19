@@ -52,11 +52,11 @@ const createUpload = async(req,res) => {
     const newUpload = new Upload({classy,name, first_alt, second_alt, third_alt, fourth_alt, fifth_alt});
     await newUpload.save()
     req.flash('success_msg', 'PDF added successfully')
-    res.status(200).redirect('/class/all_add')
+    res.status(200).redirect('/user/class/all_add')
   }
   catch(e){
     req.flash('error_msg', 'PDF has not been added successfully')
-    res.status(500).redirect('/class/add')
+    res.status(500).redirect('/user/class/add')
   }
   
   }

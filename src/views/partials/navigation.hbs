@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark p-2 bg-black">
   <div class="container">
-    <a class="navbar-brand" href="/">PDF App</a>
+    <a class="navbar-brand" href="/main">PDF App</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -32,18 +32,22 @@
               PDFs
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/class/all_add">Todas las clases</a>
-              <a class="dropdown-item" href="/class/add">Agregar una tarea</a>
+              <a class="dropdown-item" href="/user/class/all_add">Todas las clases</a>
+              <a class="dropdown-item" href="/user/class/add">Agregar una tarea</a>
+              <a class="dropdown-item" href="/">Todos los anios</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/logout">Logout</a>
             </ul>
           </li>
         {{else}}
           <ul class="nav-item">
-            <a class="nav-link" href="/class/all">Todas las clases</a>
+            <a class="nav-link" href="/user/class/all_add">Todas las clases</a>
           </ul>
           <ul class="nav-item">
-            <a class="nav-link" href="/signin">Login</a>
+            <a class="nav-link" href="/">Todos los anios</a>
+          </ul>
+          <ul class="nav-item">
+            <a class="nav-link" href="/user/signin">Login</a>
           </ul>
         {{/if}}
       </ul>
