@@ -27,8 +27,9 @@ const seeUploads = async (req,res)=>{
 
 // *********************************************************************************************** //
 const createUpload = async(req,res) => {
-    const{classy, name, first_alt, second_alt, third_alt, fourth_alt, fifth_alt} = req.body;
+    const{year,classy, name, first_alt, second_alt, third_alt, fourth_alt, fifth_alt} = req.body;
     const errors = [];
+    if(!year){errors.push({text: 'Insert year!'});}
     if(!classy){errors.push({text: 'Insert class!'});}
     if(!name){errors.push({text: 'Insert name!'});}
     if(!first_alt){errors.push({text: 'Insert first alternative!'});}
@@ -39,6 +40,7 @@ const createUpload = async(req,res) => {
     if(errors.length >0){
         res.render('../views/pdf/adminAll', {
             errors,
+            year,
             classy,
             name,
             first_alt,
@@ -49,7 +51,7 @@ const createUpload = async(req,res) => {
         });
     }
     try{
-    const newUpload = new Upload({classy,name, first_alt, second_alt, third_alt, fourth_alt, fifth_alt});
+    const newUpload = new Upload({year,classy,name, first_alt, second_alt, third_alt, fourth_alt, fifth_alt});
     await newUpload.save()
     req.flash('success_msg', 'PDF added successfully')
     res.status(200).redirect('/user/class/all_add')

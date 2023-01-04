@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const UploadFile = new mongoose.Schema({
+    year:{
+        type: String,
+        required: true,
+    },
     classy:{
         type: String,
         required: true,

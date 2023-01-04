@@ -1,0 +1,29 @@
+<!-- search-results.hbs -->
+
+<style>
+  .result {
+    margin-bottom: 20px;
+  }
+
+  .result h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .result p {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+</style>
+
+<h1>Search Results</h1>
+
+{{#if results.length}}
+  {{#each results}}
+  <h2>{{this.name}}</h2>
+  <p>{{this.description}}</p>
+{{/each}}
+
+{{else}}
+  <p>No results found.</p>
+{{/if}}
