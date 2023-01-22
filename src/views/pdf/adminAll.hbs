@@ -7,11 +7,11 @@
                   <!-- PUT REQUEST NOT YET IMPLEMEMNTET-->
                   {{#if user}}
                   
-                      <p>{{first_alt}}</p> <br>
-                      <p>{{second_alt}}</p> <br>
-                      <p>{{third_alt}}</p> <br>
-                      <p>{{fourth_alt}}</p> <br>
-                      <p>{{fifth_alt}}</p> <br>
+                      <button href={{first_alt}}>First</button> <br>
+                      <a>{{{second_alt}}}</a> <br>
+                      <a>{{third_alt}}</a> <br>
+                      <a>{{fourth_alt}}</a> <br>
+                      <a>{{fifth_alt}}</a> <br>
                  <!-- DELETE REQUEST NOT YET IMPLEMENTET-->
                   <form action="/app/app/games/games/delete/{{_id}}?_method=DELETE" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
