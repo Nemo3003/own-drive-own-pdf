@@ -5,9 +5,17 @@ const UploadFile = new mongoose.Schema({
         type: String,
         required: true,
     },
-    classy:{
+    first:{
         type: String,
-        required: true,
+        required: false,
+    },
+    second:{
+        type: String,
+        required: false,
+    },
+    third:{
+        type: String,
+        required: false,
     },
     name: {
         type: String,

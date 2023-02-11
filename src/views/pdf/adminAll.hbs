@@ -1,5 +1,9 @@
 <div class="row">
+
     {{#each uploads}}
+     
+   
+  
     <div class="col-md-3">
         <div class="card">
             <div class="card-body ">
@@ -11,27 +15,32 @@
                       <a>{{{second_alt}}}</a> <br>
                       <a>{{third_alt}}</a> <br>
                       <a>{{fourth_alt}}</a> <br>
-                      <a>{{fifth_alt}}</a> <br>
+                      <a href="{{fifth_alt}}">{{fifth_alt}}</a> <br>
+                      
                  <!-- DELETE REQUEST NOT YET IMPLEMENTET-->
                   <form action="/app/app/games/games/delete/{{_id}}?_method=DELETE" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
                   </form>
                   {{else}}
+                    
                   <h4 class="card-title d-flex justify-content-between align-items-center">{{name}}
                     <a href="/app/app/games/games/edit/{{_id}}"><i class="fas fa-edit"></i></a></h4>
-                      <p>{{first_alt}}</p>
-                      <p>{{second_alt}}</p>
-                      <p>{{third_alt}}</p>
-                      <p>{{fourth_alt}}</p>
-                      <p>{{fifth_alt}}</p>
-                    
+                      
+                      <a href="{{first_alt}}">Primera alternativa</a> <br>
+                      <a href="{{second_alt}}">Segunda alternativa</a> <br>
+                    <a href="{{third_alt}}">Tercera alternativa</a> <br>
+                      <a href="{{fourth_alt}}">Cuarta alternativa</a> <br>
+                    <a href="{{fifth_alt}}">Quinta alternativa</a> <br>
+                  <p>{{#if this.classy}}First{{/if}}</p>
+                  <p>{{#if this.first}} seconnnndd {{/if}}</p>
                       </div>
-                      <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+                      
                   </div>
-                  
+                    
               </div>
               {{/if}}
+              
      {{else}}
   <div class="card mx-auto">
     <div class="card-body">
@@ -40,5 +49,7 @@
       <a href="/app/app/games/games/add" class="btn btn-success btn-block">Create One!</a>
     </div>
   </div>
+ 
   {{/each}}
+ 
 </div>

@@ -7,6 +7,9 @@ const {createUpload, getUploads,seeUploads} = require('../controllers/upload.con
 router.get('/add', function(req, res){
     res.render('../views/pdf/formLoad.hbs')
 })
+router.get('/add1', function(req, res){
+    res.render('../views/pdf/anio/one/anatomia/anatomiaForm.hbs')
+})
 router.get('/all', function(req, res){
     res.render('../views/pdf/public.hbs')
 })
