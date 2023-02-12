@@ -1,4 +1,10 @@
 <div class="row">
+<select id="class-select">
+  <option value="all">All</option>
+  <option value="class1">Class 1</option>
+  <option value="class2">Class 2</option>
+  <!-- add more options as needed -->
+</select>
 
     {{#each uploads}}
      
@@ -33,13 +39,14 @@
                       <a href="{{fourth_alt}}">Cuarta alternativa</a> <br>
                     <a href="{{fifth_alt}}">Quinta alternativa</a> <br>
                   <p>{{#if this.classy}}First{{/if}}</p>
-                  <p>{{#if this.first}} seconnnndd {{/if}}</p>
+                
                       </div>
                       
                   </div>
                     
               </div>
               {{/if}}
+               
               
      {{else}}
   <div class="card mx-auto">
@@ -51,5 +58,6 @@
   </div>
  
   {{/each}}
+  
  
 </div>

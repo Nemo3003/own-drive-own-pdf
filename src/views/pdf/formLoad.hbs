@@ -27,7 +27,7 @@
     <div class="card-header bg-dark text-center">
       <h3 class="text-white">New PDF</h3>
     </div>
-    <div class="card-body text-right">
+    <div class="card-body text-right ">
       <form action="/user/class/pdf/add" method="POST">
       <div class="mb-3">
           <label for="year">Year:</label>
@@ -49,11 +49,6 @@
             autofocus
           />
         </div>
-        <select id="classy" name="classy">
-        <option value="{{first}}">Primer Anio</option>
-        <option value="{{second}}">Segundo Anio</option>
-        <option value="{{third}}">Terccer Anio</option>
-      </select>
         <div class="mb-3">
           <label for="name">Title:</label>
           <input
@@ -73,8 +68,9 @@
             placeholder="Drive"
             autofocus
           />
-          <div class="mb-3">
-          <label for="first">First</label>
+          <div class="border row  boxlayout d-flex and justify-content-center">
+          <div class="border col-md-3 ">
+          <label for="first">First Year</label>
           <input
             type="text"
             name="first"
@@ -82,8 +78,9 @@
             placeholder="y"
             autofocus
           />
-          <div class="mb-3">
-          <label for="second">First</label>
+          </div>
+          <div class="border col-md-3">
+          <label for="second">Second Year</label>
           <input
             type="text"
             name="second"
@@ -91,8 +88,9 @@
             placeholder="y"
             autofocus
           />
-          <div class="mb-3">
-          <label for="third">First</label>
+          </div>
+          <div class="border col-md-3">
+          <label for="third">Third Year</label>
           <input
             type="text"
             name="third"
@@ -100,6 +98,241 @@
             placeholder="y"
             autofocus
           />
+          </div>
+          </div>
+          <hr> 
+          <div class="form-group  border row  boxlayout d-flex and justify-content-center">
+          <div class="border col-md-3">
+          <label for="saludmen">Salud mental</label>
+          <input
+            type="text"
+            name="saludmen"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="saludpu">Salud Publica</label>
+          <input
+            type="text"
+            name="saludpu"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="competencia">Competencia</label>
+          <input
+            type="text"
+            name="competencia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="fundamentos">Fundamentos</label>
+          <input
+            type="text"
+            name="fundamentos"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="practicai">Practica I</label>
+          <input
+            type="text"
+            name="practicai"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="fisiologia">Fisiologia</label>
+          <input
+            type="text"
+            name="fisiologiia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="bioquimica">Bioquimica</label>
+          <input
+            type="text"
+            name="bioquimica"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="anatomia">Anatomia</label>
+          <input
+            type="text"
+            name="anatomia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="filosofia">Filosofia</label>
+          <input
+            type="text"
+            name="filosofia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="enfermeriaad">Enfermeria</label>
+          <input
+            type="text"
+            name="enfermeriaad"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="farmacologia">Farmocologia</label>
+          <input
+            type="text"
+            name="farmacologia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="infectologia">Infectologia</label>
+          <input
+            type="text"
+            name="infectologia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="saludmenii">Salud Mental II</label>
+          <input
+            type="text"
+            name="saludmenii"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="practicaii">Practica II</label>
+          <input
+            type="text"
+            name="practicaii"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="antropologia">Antropologia</label>
+          <input
+            type="text"
+            name="antropologia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="nutricion">Nutricion</label>
+          <input
+            type="text"
+            name="nutricion"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="informatica">Informatica</label>
+          <input
+            type="text"
+            name="informatica"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="bioetica">Bioetica</label>
+          <input
+            type="text"
+            name="bioetica"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="gerontologia">Gerontologia</label>
+          <input
+            type="text"
+            name="gerontologia"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="orggesadm">Org.Ges.Adm</label>
+          <input
+            type="text"
+            name="orggesadm"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="comunitaria">salud comunitaria</label>
+          <input
+            type="text"
+            name="comunitaria"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="practicaiii">Practica III</label>
+          <input
+            type="text"
+            name="practicaiii"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <div class="border col-md-3">
+          <label for="ingles">Ingles</label>
+          <input
+            type="text"
+            name="ingles"
+            class="form-control"
+            placeholder="y"
+            autofocus
+          />
+          </div>
+          <hr>
         </div>
         <div class="mb-3">
           <label for="second_alt">Second Alternative:</label>

@@ -27,7 +27,7 @@ const seeUploads = async (req,res)=>{
 
 // *********************************************************************************************** //
 const createUpload = async(req,res) => {
-    const{year,classy, name,first,second, third, first_alt, second_alt, third_alt, fourth_alt, fifth_alt} = req.body;
+    const{year,classy, name,first,second, third,saludmen,saludpu,competencia,fundamentos,practicai,fisiologia,bioquimica,anatomia,filosofia, enfermeriaad,farmacologia,infectologia,saludmenii,practicaii,antropologia,nutricion,informatica,bioetica,gerontologia,orggesadm,comunitaria,practicaiii,ingles, first_alt, second_alt, third_alt, fourth_alt, fifth_alt} = req.body;
     const errors = [];
     if(!year){errors.push({text: 'Insert year!'});}
     if(!classy){errors.push({text: 'Insert class!'});}
@@ -44,6 +44,29 @@ const createUpload = async(req,res) => {
             first,
             second,
             third,
+            saludmen,
+            saludpu,
+            competencia,
+            fundamentos,
+            practicai,
+            fisiologia,
+            bioquimica,
+            anatomia,
+            filosofia,
+            enfermeriaad,
+            farmacologia,
+            infectologia,
+            saludmenii,
+            practicaii,
+            antropologia,
+            nutricion,
+            informatica,
+            bioetica,
+            gerontologia,
+            orggesadm,
+            comunitaria,
+            practicaiii,
+            ingles,
             name,
             first_alt,
             second_alt,
@@ -53,7 +76,7 @@ const createUpload = async(req,res) => {
         });
     }
     try{
-    const newUpload = new Upload({year,classy,name,first,second,third, first_alt, second_alt, third_alt, fourth_alt, fifth_alt});
+    const newUpload = new Upload({year,classy, name,first,second, third,saludmen,saludpu,competencia,fundamentos,practicai,fisiologia,bioquimica,anatomia,filosofia, enfermeriaad,farmacologia,infectologia,saludmenii,practicaii,antropologia,nutricion,informatica,bioetica,gerontologia,orggesadm,comunitaria,practicaiii,ingles, first_alt, second_alt, third_alt, fourth_alt, fifth_alt});
     await newUpload.save()
     req.flash('success_msg', 'PDF added successfully')
     res.status(200).redirect('/user/class/all_add')

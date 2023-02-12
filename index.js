@@ -63,6 +63,26 @@ app
   })
   .use("/", require("./src/routes"));
 
+  app.get("/data", (req, res) => {
+    const selectedClass = req.query.class;
+  
+    let query = {};
+    if (selectedClass !== "all") {
+      query = { class: selectedClass };
+    }
+  
+    Item.find(query, (err, items) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.render("data", { items: items });
+      }
+    });
+  });
+  
+
+
+
 mongodb.initDb((err, mongodb) => {
     if (err) {
       console.log(err);
