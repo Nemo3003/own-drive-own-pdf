@@ -1,63 +1,59 @@
-<div class="row mt-2">
-  
-  <h2>Recent Entries:</h2>
-    {{#each uploads}}
-
-    <div class="col-md-3">
-        <div class="card">
-            <div class="card-body ">
-                <h4 class="card-title d-flex justify-content-between align-items-center">titulo:{{name}}</h4>
-                  <!-- PUT REQUEST NOT YET IMPLEMEMNTET-->
-                  {{#if user}}
-                  
-                      <button href={{first_alt}}>First</button> <br>
-                      <a>{{{second_alt}}}</a> <br>
-                      <a>{{third_alt}}</a> <br>
-                      <a>{{fourth_alt}}</a> <br>
-                      <a href="{{fifth_alt}}">{{fifth_alt}}</a> <br>
-                      
-                 <!-- DELETE REQUEST NOT YET IMPLEMENTET-->
-                  <form action="/app/app/games/games/delete/{{_id}}?_method=DELETE" method="POST">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
-                  </form>
-                  {{else}}
-                    
-                  <h4 class="card-title d-flex justify-content-between align-items-center">{{name}}
-                    <a href="/app/app/games/games/edit/{{_id}}"><i class="fas fa-edit"></i></a></h4>
-                      
-                      <a href="{{first_alt}}">Primera alternativa</a> <br>
-                      <a href="{{second_alt}}">Segunda alternativa</a> <br>
-                    <a href="{{third_alt}}">Tercera alternativa</a> <br>
-                      <a href="{{fourth_alt}}">Cuarta alternativa</a> <br>
-                    <a href="{{fifth_alt}}">Quinta alternativa</a> <br>
-                  <p>{{#if this.classy}}First{{/if}}</p>
-                  <p>{{#if this.anatomia}} OOOOOOHHHH {{/if}}</p>
-                
-                      </div>
-                      
-                  </div>
-                    
-              </div>
-              {{/if}}
-               
-              
-     {{else}}
-  <div class="card mx-auto">
-    <div class="card-body">
-      <h1>Hello {{user.name}}</h1>
-      <p clsss="lead">There are no pdfs yet.</p>
-      <a href="/app/app/games/games/add" class="btn btn-success btn-block">Create One!</a>
-    </div>
+<div class="row mt-2 py-4 mb-4">
+  <h1 class="d-flex justify-content-center">Clases </h1>
+  <nav class="navbar navbar-expand-lg navbar-dark p-2 bg-black justify-content-center fixed-bottom">
+  <div class="d-flex flex-row gap-2 justify-content-center dropup" fixed-top >
+          <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Primero
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdup-item"  href="#saludmen">Salud mental</a></li>
+          <li><a class="dropdown-item" href="#saludpu">Salud publica</a></li>
+          <li><a class="dropdown-item" href="#competencia">Competencia</a></li>
+          <li><a class="dropdown-item" href="#fundamentos">Fundamentos</a></li>
+          <li><a class="dropdown-item" href="#practicai">Practica I</a></li>
+          <li><a class="dropdown-item" href="#fisiologia">Fisiologia</a></li>
+          <li><a class="dropdown-item" href="#bioquimica">Bioquimica</a></li>
+          <li><a class="dropdown-item" href="#anatomia">Anatomia</a></li>
+          <li><a class="dropdown-item" href="#filosofia">Filosofia</a></li>
+        </ul>
+      </div>
+    <br>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Segundo
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#enfermeria">Enfermeria</a></li>
+            <li><a class="dropdown-item" href="#farmacologia">Farmacologia</a></li>
+            <li><a class="dropdown-item" href="#infectologia">Infectologia</a></li>
+            <li><a class="dropdown-item" href="#saludmenii">Salud mental II</a></li>
+            <li><a class="dropdown-item" href="#practicaii">Practica II</a></li>
+            <li><a class="dropdown-item" href="#antropologia">Antropologia</a></li>
+            <li><a class="dropdown-item" href="#nutricion">Nutricion</a></li>
+            <li><a class="dropdown-item" href="#informatica">Informatica</a></li>
+          </ul>
+        </div>
+        <br>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle p-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tercero
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#bioetica">Bioetica</a></li>
+            <li><a class="dropdown-item" href="#gerontologia">Gerontologia</a></li>
+            <li><a class="dropdown-item" href="#orggesadm">Org.Ges.Adm</a></li>
+            <li><a class="dropdown-item" href="#saludcom">Salud Comun.</a></li>
+            <li><a class="dropdown-item" href="#practicaiii">Practica III</a></li>
+            <li><a class="dropdown-item" href="#ingles">Ingles</a></li>
+          </ul>
+        </div>
+        
   </div>
- 
-  {{/each}}
-  
- 
-</div>
+</nav>
 
 <hr>
-<h2 id="saludmen">Salud Mental</h2>
+<h2 id="saludmen" class="d-flex justify-content-center">Salud Mental</h2>
 
 <div>
   {{#each uploads}}
@@ -83,7 +79,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="saludpu">Salud Publica</h2>
+<span id="saludpu"></span>
+<h2 class="d-flex justify-content-center">Salud Publica</h2>
 
 <div>
   {{#each uploads}}
@@ -109,7 +106,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="competencia">Competencias comunicativas</h2>
+<span id="competencia"></span>
+<h2 class="d-flex justify-content-center">Competencias comunicativas</h2>
 
 <div>
   {{#each uploads}}
@@ -135,7 +133,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="fundamentos">Fundamentos de enfermeria</h2>
+<span id="fundamentos"></span>
+<h2 class="d-flex justify-content-center">Fundamentos de enfermeria</h2>
 
 <div>
   {{#each uploads}}
@@ -162,7 +161,8 @@
 </div>
 
 <hr>
-<h2 id="practicai">Practica I</h2>
+<span id="practicai"></span>
+<h2 class="d-flex justify-content-center">Practica I</h2>
 
 <div>
   {{#each uploads}}
@@ -188,7 +188,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="fisiologia">Fisiologia</h2>
+<span id="fisiologia" ></span>
+<h2 class="d-flex justify-content-center">Fisiologia</h2>
 
 <div>
   {{#each uploads}}
@@ -214,7 +215,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="bioquimica">Bioquimica</h2>
+<span id="bioquimica"></span>
+<h2  class="d-flex justify-content-center">Bioquimica</h2>
 
 <div>
   {{#each uploads}}
@@ -240,13 +242,14 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="anatomia">Anatomia</h2>
+<span  id="anatomia" ></span>
+<h2 class="d-flex justify-content-center">Anatomia</h2>
 
 <div>
   {{#each uploads}}
   {{#if anatomia}}
   
-    <div class="col-md-3">
+    <div class="col-md-3 d-flex justify-content-around">
         <div class="card">
             <div class="card-body ">
        <h4 class="card-title d-flex justify-content-between align-items-center">{{name}}
@@ -266,7 +269,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="filosofia">Filosofia</h2>
+<span id="filosofia"></span>
+<h2  class="d-flex justify-content-center">Filosofia</h2>
 
 <div>
   {{#each uploads}}
@@ -292,7 +296,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="enfermeria">Enfermeria del adulto</h2>
+<span id="enfermeria" ></span>
+<h2 class="d-flex justify-content-center">Enfermeria del adulto</h2>
 
 <div>
   {{#each uploads}}
@@ -318,7 +323,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="farmacologia">Farmacologia y Terapeutica aplicada</h2>
+<span id="farmacologia"></span>
+<h2 class="d-flex justify-content-center">Farmacologia y Terapeutica aplicada</h2>
 
 <div>
   {{#each uploads}}
@@ -344,7 +350,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="infectologia">Infectologia Aplicada a la Enfermeria</h2>
+<span id="infectologia" ></span>
+<h2 class="d-flex justify-content-center">Infectologia Aplicada a la Enfermeria</h2>
 
 <div>
   {{#each uploads}}
@@ -370,7 +377,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="saludmenii">Enfermeria en Salud Mental y Psiquiatria II</h2>
+<span id="saludmenii" ></span>
+<h2 class="d-flex justify-content-center">Enfermeria en Salud Mental y Psiquiatria II</h2>
 
 <div>
   {{#each uploads}}
@@ -396,7 +404,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="practicaii">Practica II</h2>
+<span id="practicaii"></span>
+<h2 class="d-flex justify-content-center">Practica II</h2>
 
 <div>
   {{#each uploads}}
@@ -422,7 +431,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="antropologia">Antropologia de la Salud</h2>
+<span id="antropologia"></span>
+<h2 class="d-flex justify-content-center">Antropologia de la Salud</h2>
 
 <div>
   {{#each uploads}}
@@ -448,7 +458,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="nutricion">Nutricion y Dietetica</h2>
+<span id="nutricion"></span>
+<h2 class="d-flex justify-content-center">Nutricion y Dietetica</h2>
 
 <div>
   {{#each uploads}}
@@ -474,7 +485,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="informatica">Informatica</h2>
+<span  id="informatica"></span>
+<h2 class="d-flex justify-content-center">Informatica</h2>
 
 <div>
   {{#each uploads}}
@@ -500,7 +512,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="bioetica">Bioetica y Enfermeria Legal</h2>
+<span id="bioetica"></span>
+<h2 class="d-flex justify-content-center">Bioetica y Enfermeria Legal</h2>
 
 <div>
   {{#each uploads}}
@@ -526,7 +539,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="gerontologia">Enfermeria Gerontologica</h2>
+<span id="gerontologia"></span>
+<h2 class="d-flex justify-content-center">Enfermeria Gerontologica</h2>
 
 <div>
   {{#each uploads}}
@@ -552,7 +566,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="orggesadm">Org.Ges. y Adm de los servicios de enfermeria</h2>
+<span id="orggesadm"></span>
+<h2 class="d-flex justify-content-center">Org.Ges. y Adm de los servicios de enfermeria</h2>
 
 <div>
   {{#each uploads}}
@@ -578,7 +593,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="saludcom">Enfermeria en Salud Comunitaria</h2>
+<span id="saludcom"></span>
+<h2 class="d-flex justify-content-center">Enfermeria en Salud Comunitaria</h2>
 
 <div>
   {{#each uploads}}
@@ -604,7 +620,8 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="practicaiii">Practica III</h2>
+<span id="practicaiii"></span>
+<h2 class="d-flex justify-content-center">Practica III</h2>
 
 <div>
   {{#each uploads}}
@@ -630,15 +647,16 @@
   {{/each}}
 </div>
 <hr>
-<h2 id="ingles">Ingles Tecnico</h2>
+<span id="ingles"></span>
+<h2 class="d-flex justify-content-center">Ingles Tecnico</h2>
 
 <div>
   {{#each uploads}}
   {{#if ingles}}
   
-    <div class="col-md-3">
+    <div class="col-md-3 ingles">
         <div class="card">
-            <div class="card-body ">
+            <div class="card-body">
        <h4 class="card-title d-flex justify-content-between align-items-center">{{name}}
                     <a href="/app/app/games/games/edit/{{_id}}"><i class="fas fa-edit"></i></a></h4>
                       

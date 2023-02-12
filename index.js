@@ -80,7 +80,10 @@ app
     });
   });
   
-
+  app.get('/user/class/all_add', function (req, res) {
+    res.render('adminAll', {
+      currentPage: 'adminAll'
+    })});
 
 
 mongodb.initDb((err, mongodb) => {

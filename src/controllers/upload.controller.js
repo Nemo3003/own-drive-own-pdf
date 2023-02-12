@@ -25,10 +25,6 @@ const seeUploads = async (req,res)=>{
   }
 
 
-  
-
-
-
 // *********************************************************************************************** //
 const createUpload = async(req,res) => {
     const{year,classy, name,first,second, third,saludmen,saludpu,competencia,fundamentos,practicai,fisiologia,bioquimica,anatomia,filosofia, enfermeriaad,farmacologia,infectologia,saludmenii,practicaii,antropologia,nutricion,informatica,bioetica,gerontologia,orggesadm,comunitaria,practicaiii,ingles, first_alt, second_alt, third_alt, fourth_alt, fifth_alt} = req.body;

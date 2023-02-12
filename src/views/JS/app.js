@@ -1,10 +1,6 @@
-$( document ).ready(function() {
-   
-  $('.dropdown-item').click(function(){
-   $('.navbar div').removeClass('show');
-});  
-$('.single').click(function(){
-       $('.navbar div').removeClass('show');
-});
+const toggleButton = document.getElementById("toggle-dark-mode");
+const root = document.documentElement;
 
- }); 
+toggleButton.addEventListener("click", function() {
+  root.classList.toggle("dark-mode");
+});

@@ -11,7 +11,7 @@ let coded2 = encodeURIComponent(process.env.GAMES_SECRET);
 
 const signPassp = passport.authenticate("local", {
   successRedirect: "class/add",
-  failureRedirect: "/signin",
+  failureRedirect: "/user/signin",
   failureFlash: true,
 })
 
