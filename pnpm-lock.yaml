@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  babel: ^6.23.0
   bcrypt: ^5.1.0
   bcryptjs: ^2.4.3
   body-parser: ^1.20.1
@@ -19,6 +20,7 @@ specifiers:
   path: ^0.12.7
 
 dependencies:
+  babel: 6.23.0
   bcrypt: 5.1.0
   bcryptjs: 2.4.3
   body-parser: 1.20.1
@@ -926,6 +928,12 @@ packages:
 
   /array-flatten/1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
+    dev: false
+
+  /babel/6.23.0:
+    resolution: {integrity: sha512-ZDcCaI8Vlct8PJ3DvmyqUz+5X2Ylz3ZuuItBe/74yXosk2dwyVo/aN7MCJ8HJzhnnJ+6yP4o+lDgG9MBe91DLA==}
+    deprecated: In 6.x, the babel package has been deprecated in favor of babel-cli. Check https://opencollective.com/babel to support the Babel maintainers
+    hasBin: true
     dev: false
 
   /balanced-match/1.0.2:
