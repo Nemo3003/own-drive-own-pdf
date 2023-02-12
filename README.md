@@ -3,6 +3,8 @@
 - NodeJs
 - Express
 - MongoDB
+- Bootstrap
+- CSS
 - Handlebars
 
 ## Description
