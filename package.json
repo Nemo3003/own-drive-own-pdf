@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build":"pnpm run build",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
