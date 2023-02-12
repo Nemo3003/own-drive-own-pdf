@@ -16,5 +16,14 @@ router.get('/all', function(req, res){
 router.get("/all_add", seeUploads)
 router.post('/pdf/add', createUpload);
 
+router.get('/filter', (req, res) => {
+    const className = req.query.class;
+    Upload.find({ class: className }, (err, uploads) => {
+      if (err) {
+        return res.send(err);
+      }
+      res.render('../views/pdf/adminAll.hbs', { uploads: uploads });
+    });
+  });
 // Exports
 module.exports = router;

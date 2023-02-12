@@ -26,6 +26,15 @@ router.get('/search', async (req, res) => {
     console.log(searchResults);
 
   });
+  router.get('/filter', (req, res) => {
+    const className = req.query.class;
+    Uploads.find({ class: className }, (err, uploads) => {
+      if (err) {
+        return res.send(err);
+      }
+      res.render('adminAll.hbs', { uploads: uploads });
+    });
+  });
   
 router.use('/', require('./class.routes'));
 router.use('/user/class', require('./upload.routes'));

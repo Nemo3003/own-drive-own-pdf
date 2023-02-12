@@ -1,8 +1,16 @@
+html {
+    height: 100%;
+}
+/*Controls the body behavior*/
 body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 footer{
     margin-top: auto;
 }
+
+
+
