@@ -27,10 +27,8 @@ const seeUploads = async (req,res)=>{
 
 // *********************************************************************************************** //
 const createUpload = async(req,res) => {
-    const{year,classy, name,first,second, third,saludmen,saludpu,competencia,fundamentos,practicai,fisiologia,bioquimica,anatomia,filosofia, enfermeriaad,farmacologia,infectologia,saludmenii,practicaii,antropologia,nutricion,informatica,bioetica,gerontologia,orggesadm,comunitaria,practicaiii,ingles, first_alt, second_alt, third_alt, fourth_alt, fifth_alt} = req.body;
-    const errors = [];
-    if(!year){errors.push({text: 'Insert year!'});}
-    if(!classy){errors.push({text: 'Insert class!'});}
+    const{ name,first,second, third,saludmen,saludpu,competencia,fundamentos,practicai,fisiologia,bioquimica,anatomia,filosofia, enfermeriaad,farmacologia,infectologia,saludmenii,practicaii,antropologia,nutricion,informatica,bioetica,gerontologia,orggesadm,comunitaria,practicaiii,ingles, first_alt, second_alt, third_alt, fourth_alt, fifth_alt} = req.body;
+    const errors = [];      
     if(!name){errors.push({text: 'Insert name!'});}
     if(!first_alt){errors.push({text: 'Insert first alternative!'});}
     if(!second_alt){errors.push({text: 'Insert second alternative!'});}
@@ -40,7 +38,6 @@ const createUpload = async(req,res) => {
     if(errors.length >0){
         res.render('../views/pdf/adminAll', {
             errors,
-            year,
             first,
             second,
             third,
@@ -76,7 +73,7 @@ const createUpload = async(req,res) => {
         });
     }
     try{
-    const newUpload = new Upload({year,classy, name,first,second, third,saludmen,saludpu,competencia,fundamentos,practicai,fisiologia,bioquimica,anatomia,filosofia, enfermeriaad,farmacologia,infectologia,saludmenii,practicaii,antropologia,nutricion,informatica,bioetica,gerontologia,orggesadm,comunitaria,practicaiii,ingles, first_alt, second_alt, third_alt, fourth_alt, fifth_alt});
+    const newUpload = new Upload({ name,first,second, third,saludmen,saludpu,competencia,fundamentos,practicai,fisiologia,bioquimica,anatomia,filosofia, enfermeriaad,farmacologia,infectologia,saludmenii,practicaii,antropologia,nutricion,informatica,bioetica,gerontologia,orggesadm,comunitaria,practicaiii,ingles, first_alt, second_alt, third_alt, fourth_alt, fifth_alt});
     await newUpload.save()
     req.flash('success_msg', 'PDF added successfully')
     res.status(200).redirect('/user/class/all_add')

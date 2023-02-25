@@ -11,9 +11,12 @@ body{
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     background: #5AC3B0;
+    min-height: fit-content;
 }
 footer{
     margin-top: auto;
+    position: bottom;
+    
 }
 .col-md-3{
     display: flex;

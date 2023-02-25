@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const UploadFile = new mongoose.Schema({
     year:{
         type: String,
-        required: true,
+        required: false,
     },
     first:{
         type: String,
